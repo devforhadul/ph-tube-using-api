@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH Tube</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+    <!-- Daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .active{
+        background-color: #FF1F3D;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="w-11/12 mx-auto">
+      <div
+        class="flex items-center justify-between py-5 border-b border-gray-200"
+      >
+        <div>
+          <img src="./assets/Logo.png" alt="" />
+        </div>
+        <div>
+          <button
+            class="py-2 px-5 bg-gray-300 text-gray-700 font-semibold rounded-md"
+          >
+            Sort by view
+          </button>
+        </div>
+        <div>
+          <button class="px-3 py-1 rounded-sm text-white bg-[#FF1F3D]">
+            Blog
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main section -->
+    <main class="w-11/12 mx-auto">
+      <div>
+        <div
+          id="categoryBox"
+          class="text-center flex justify-center space-x-4 my-5"
+        >
+          <button
+            id="btnAll"
+            onclick="loadVideos()"
+            class="bg-[#25252526] px-5 py-1 rounded hover:bg-green-600 active hover:text-white text-gray-700 font-semibold categoryClass"
+          >
+            All
+          </button>
+          <!-- Add dynamic category here... -->
+        </div>
+        <div id="elementBox" class="grid grid-cols-4 gap-5">
+
+          <!-- add dynamacally -->
+           
+
+        </div>
+      </div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

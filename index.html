@@ -18,8 +18,8 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-      .active{
-        background-color: #FF1F3D;
+      .active {
+        background-color: #ff1f3d;
         color: white;
       }
     </style>
@@ -33,14 +33,28 @@
           <img src="./assets/Logo.png" alt="" />
         </div>
         <div>
-          <button
-            class="py-2 px-5 bg-gray-300 text-gray-700 font-semibold rounded-md"
-          >
-            Sort by view
-          </button>
+          <label class="input">
+            <svg
+              class="h-[1em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input id="searchBox" type="search" required placeholder="Search" />
+          </label>
         </div>
         <div>
-          <button class="px-3 py-1 rounded-sm text-white bg-[#FF1F3D]">
+          <button class="px-3 py-1 rounded-sm text-white bg-[#FF1F3D] md:block hidden">
             Blog
           </button>
         </div>
@@ -63,11 +77,31 @@
           </button>
           <!-- Add dynamic category here... -->
         </div>
-        <div id="elementBox" class="grid grid-cols-4 gap-5">
+        <!-- You can open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_3.showModal()">
+          open modal
+        </button> -->
+        <dialog id="modal-box" class="modal">
+          <div class="modal-box">
+            <form method="dialog">
+              <button
+                class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              >
+                ✕
+              </button>
+            </form>
+            <div id="modalInfo">
+              
+            </div>
+            
+
+          </div>
+        </dialog>
+        <div id="elementBox" class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+          
 
           <!-- add dynamacally -->
-           
-
         </div>
       </div>
     </main>
